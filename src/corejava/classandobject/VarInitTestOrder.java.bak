@@ -1,0 +1,18 @@
+public class VarInitOrderTest 
+{
+	private int id = initId();
+
+	static void initId()
+	{
+		id = 3;
+	}
+
+	public int getId()
+	{
+		return id;
+	}
+
+	public static void main(String[] args) 
+	{
+	}
+}

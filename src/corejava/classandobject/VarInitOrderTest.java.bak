@@ -1,0 +1,43 @@
+/**
+	演示变量的初始化顺序
+	涉及到6个方式：
+	对于非静态变量：
+		显示初始化，构造代码块初始化，构造方法初始化
+
+	对于静态变量：
+		显示初始化，静态代码初始化
+*/
+
+public class VarInitOrderTest 
+{
+	public static void main(String[] args) 
+	{
+		Person zhangsan = new Person("张三",21);
+		System.out.println(zhangsan);
+	}
+}
+
+
+class Person 
+{
+	private String name;
+	private int age;
+	
+	{
+		System.out.println("---------------构造代码块执行--------------");
+		height = 175;
+	}
+	private double height = 170;
+	public Person(String name,int age)
+	{
+		System.out.println("---------------构造方法执行--------------");
+		this.name = name;
+		this.age = age;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "["+this.getClass().getName()+":name = "+name+",age = "+age+",height = "+height+"]";
+	}
+}
