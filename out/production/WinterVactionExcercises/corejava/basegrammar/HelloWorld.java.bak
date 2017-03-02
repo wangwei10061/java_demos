@@ -1,0 +1,8 @@
+class HelloWorld 
+{
+	public static void main(String\u005B\u005D args) 
+	{
+		char[] a = 'àê';
+		System.out.println(Character.codePointAt(a,0));
+	}
+}
